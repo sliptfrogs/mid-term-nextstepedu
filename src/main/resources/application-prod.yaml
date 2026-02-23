@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://nozomi.proxy.rlwy.net:27640/railway
+    url: jdbc:postgresql://nozomi.proxy.rlwy.net:53576/railway
     username: postgres
-    password: ufvzIuZqqxejYnfRIHzvNqAtwQRfhusk
+    password: mvfqlmRhNlfxyluSuiIiEJWlBylcPrwT
     driver-class-name: org.postgresql.Driver
 
   jpa:
