@@ -16,7 +16,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProgramController {
     private final ProgramService programService;
-
     @PostMapping
     public ResponseEntity<ProgramResponse> createProgram(@Valid @RequestBody ProgramRequest programRequest) {
         ProgramResponse createdProgram = programService.createProgram(programRequest);
