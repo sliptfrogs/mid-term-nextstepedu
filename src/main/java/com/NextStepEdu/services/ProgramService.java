@@ -10,7 +10,6 @@ import java.util.List;
 public interface ProgramService {
 
     List<ProgramResponse> getAllProgram();
-
     ProgramResponse createProgram(@Valid ProgramRequest programRequest);
 
     ProgramResponse getProgramById(Integer id);
