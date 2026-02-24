@@ -127,6 +127,8 @@ public class SecurityConfig {
         config.setMaxAge(3600L);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/api/v1/profile", config);
+        source.registerCorsConfiguration("/api/v1/profile/**", config);
         source.registerCorsConfiguration("/**", config);
         return source;
     }
