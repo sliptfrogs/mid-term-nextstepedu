@@ -120,9 +120,12 @@ public class SecurityConfig {
         config.setAllowedOrigins(java.util.List.of(
                 "https://next-step-edu.vercel.app",
                 "http://localhost:3000",
-                "http://localhost:5173"));
+                "http://localhost:3001",
+                "http://localhost:4200",
+                "http://localhost:5173"
+        ));
         config.setAllowedMethods(java.util.List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
-        config.setAllowedHeaders(java.util.List.of("Authorization", "Content-Type", "Accept", "Origin"));
+        config.addAllowedHeader("*"); // Allow all headers
         config.setAllowCredentials(true);
         config.setMaxAge(3600L);
 
