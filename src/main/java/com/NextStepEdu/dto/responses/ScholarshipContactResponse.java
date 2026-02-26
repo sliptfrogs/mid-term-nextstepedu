@@ -13,5 +13,5 @@ public class ScholarshipContactResponse {
     private String email;
     private String phone;
     private String websiteUrl;
-    private Integer scholarshipId;
+    private Integer scholarship_id;
 }

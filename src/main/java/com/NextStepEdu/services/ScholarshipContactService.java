@@ -1,17 +1,18 @@
 package com.NextStepEdu.services;
 
 import com.NextStepEdu.dto.requests.ScholarshipContactRequest;
+import com.NextStepEdu.dto.responses.ScholarshipContactResponse;
 import com.NextStepEdu.models.ScholarshipContactModel;
 
 import java.util.List;
 
 public interface ScholarshipContactService {
 
-    List<ScholarshipContactModel> findAll();
+    List<ScholarshipContactResponse> findAll();
 
     List<ScholarshipContactModel> findByScholarshipId(Integer scholarshipId);
 
-    ScholarshipContactModel findById(Integer id);
+    ScholarshipContactResponse findById(Integer id);
 
     ScholarshipContactModel create(ScholarshipContactRequest request);
 

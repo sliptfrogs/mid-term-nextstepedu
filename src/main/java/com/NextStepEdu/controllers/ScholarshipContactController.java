@@ -1,6 +1,7 @@
 package com.NextStepEdu.controllers;
 
 import com.NextStepEdu.dto.requests.ScholarshipContactRequest;
+import com.NextStepEdu.dto.responses.ScholarshipContactResponse;
 import com.NextStepEdu.models.ScholarshipContactModel;
 import com.NextStepEdu.services.ScholarshipContactService;
 import jakarta.validation.Valid;
@@ -19,8 +20,8 @@ public class ScholarshipContactController {
     private final ScholarshipContactService scholarshipContactService;
 
     @GetMapping
-    public ResponseEntity<List<ScholarshipContactModel>> getAllContacts() {
-        List<ScholarshipContactModel> contacts = scholarshipContactService.findAll();
+    public ResponseEntity<List<ScholarshipContactResponse>> getAllContacts() {
+        List<ScholarshipContactResponse> contacts = scholarshipContactService.findAll();
         return ResponseEntity.ok(contacts);
     }
 
@@ -33,8 +34,8 @@ public class ScholarshipContactController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ScholarshipContactModel> getContactById(@PathVariable Integer id) {
-        ScholarshipContactModel contact = scholarshipContactService.findById(id);
+    public ResponseEntity<ScholarshipContactResponse> getContactById(@PathVariable Integer id) {
+        ScholarshipContactResponse contact = scholarshipContactService.findById(id);
         return ResponseEntity.ok(contact);
     }
 
