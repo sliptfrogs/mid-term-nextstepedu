@@ -23,6 +23,7 @@ public record ScholarshipResponse(
         String applyLink,
         String status,
         LocalDateTime deadline,
+        Float amount,
         LocalDateTime createdAt,
         LocalDateTime updatedAt,
         ProgramInfo program,
@@ -114,6 +115,7 @@ public record ScholarshipResponse(
                 .description(scholarship.getDescription())
                 .level(scholarship.getLevel())
                 .maxApplicant(scholarship.getMaxApplicant())
+                .amount(scholarship.getAmount())
                 .benefits(scholarship.getBenefits())
                 .requirements(scholarship.getRequirements())
                 .howToApply(scholarship.getHowToApply())

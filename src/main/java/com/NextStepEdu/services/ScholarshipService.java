@@ -23,6 +23,7 @@ public interface ScholarshipService {
             String description,
             Integer level,
             Integer maxApplicant,
+            Float amount,
             String benefits,
             String requirements,
             String howToApply,

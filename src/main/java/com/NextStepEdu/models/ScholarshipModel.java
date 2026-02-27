@@ -52,6 +52,8 @@ public class ScholarshipModel {
 
     private Integer maxApplicant;
 
+    private Float amount;
+
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 

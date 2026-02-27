@@ -22,6 +22,8 @@ public class ScholarshipRequest {
     @NotNull(message = "Max Applicant is required")
     private Integer maxApplicant;
 
+    private Float amount;
+
     private String benefits;           // Optional
     private String requirements;       // Optional
     private String howToApply;         // Optional

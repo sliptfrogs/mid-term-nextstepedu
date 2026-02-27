@@ -99,9 +99,9 @@ public class ScholarshipController {
 
         // Option 2: Parse as your DTO
         ScholarshipRequest request = mapper.readValue(data, ScholarshipRequest.class);
-        System.out.println("Parsed as DTO - Name: " + request.getName());
+        System.out.println("Parsed as DTO - Name: " + request.getAmount());
 
-        scholarshipService.create(request.getName(), request.getDescription(), request.getLevel(),request.getMaxApplicant(), request.getBenefits(), request.getRequirements(), request.getHowToApply(), request.getApplyLink(), request.getStatus(), request.getDeadline(), request.getProgramId(), request.getUniversityId(), logo, coverImage);
+        scholarshipService.create(request.getName(), request.getDescription(), request.getLevel(),request.getMaxApplicant(), request.getAmount(), request.getBenefits(), request.getRequirements(), request.getHowToApply(), request.getApplyLink(), request.getStatus(), request.getDeadline(), request.getProgramId(), request.getUniversityId(), logo, coverImage);
 
         // Option 3: Return structured response
         Map<String, Object> response = new HashMap<>();
