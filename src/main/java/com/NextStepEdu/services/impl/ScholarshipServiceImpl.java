@@ -118,6 +118,7 @@ public class ScholarshipServiceImpl implements ScholarshipService {
             String description,
             Integer level,
             String benefits,
+            Float amount,
             String requirements,
             String howToApply,
             String applyLink,
@@ -138,6 +139,7 @@ public class ScholarshipServiceImpl implements ScholarshipService {
         if (description != null) scholarship.setDescription(description);
         if (level != null) scholarship.setLevel(level);
         if (benefits != null) scholarship.setBenefits(benefits);
+        if (amount != null) scholarship.setAmount(amount);
         if (requirements != null) scholarship.setRequirements(requirements);
         if (howToApply != null) scholarship.setHowToApply(howToApply);
         if (applyLink != null) scholarship.setApplyLink(applyLink);

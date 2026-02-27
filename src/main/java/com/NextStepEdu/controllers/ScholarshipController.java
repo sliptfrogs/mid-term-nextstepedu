@@ -143,6 +143,7 @@ public class ScholarshipController {
                 request.getDescription(),
                 request.getLevel(),
                 request.getBenefits(),
+                request.getAmount(),
                 request.getRequirements(),
                 request.getHowToApply(),
                 request.getApplyLink(),
