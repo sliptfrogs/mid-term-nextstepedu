@@ -50,6 +50,12 @@ public class FacultyController {
         return facultyService.getAll(universityId);
     }
 
+    @GetMapping("/university/{universityId}")
+    @Operation(summary = "Get faculties by university ID", description = "Return all faculties for a specific university")
+    public List<FacultyResponse> getByUniversityId(@PathVariable Integer universityId) {
+        return facultyService.getAll(universityId);
+    }
+
     @PutMapping("/{id}")
     @Operation(summary = "Update faculty", description = "Update a faculty by ID")
     public FacultyResponse update(@PathVariable Integer id, @Valid @RequestBody FacultyRequest request) {
