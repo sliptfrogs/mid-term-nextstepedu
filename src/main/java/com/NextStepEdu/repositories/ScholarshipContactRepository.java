@@ -1,5 +1,6 @@
 package com.NextStepEdu.repositories;
 
+import com.NextStepEdu.dto.responses.ScholarshipContactResponse;
 import com.NextStepEdu.models.ScholarshipContactModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 

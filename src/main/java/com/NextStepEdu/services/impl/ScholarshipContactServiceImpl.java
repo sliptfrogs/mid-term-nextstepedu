@@ -1,6 +1,8 @@
 package com.NextStepEdu.services.impl;
 
 import com.NextStepEdu.dto.requests.ScholarshipContactRequest;
+import com.NextStepEdu.dto.responses.ScholarshipContactResponse;
+import com.NextStepEdu.mappers.ScholarshipContactMapper;
 import com.NextStepEdu.models.ScholarshipContactModel;
 import com.NextStepEdu.models.ScholarshipModel;
 import com.NextStepEdu.repositories.ScholarshipContactRepository;
@@ -17,11 +19,17 @@ public class ScholarshipContactServiceImpl implements ScholarshipContactService 
 
     private final ScholarshipContactRepository scholarshipContactRepository;
     private final ScholarshipRepository scholarshipRepository;
+    private final ScholarshipContactMapper scholarshipContactMapper;
 
     @Override
-    public List<ScholarshipContactModel> findAll() {
-        return scholarshipContactRepository.findAll();
+    public List<ScholarshipContactResponse> findAll() {
+
+//        return scholarshipContactRepository.findAll();
+
+        return scholarshipContactMapper.toScholarshipContactResponseList(scholarshipContactRepository.findAll());
     }
+
+
 
     @Override
     public List<ScholarshipContactModel> findByScholarshipId(Integer scholarshipId) {
@@ -29,9 +37,9 @@ public class ScholarshipContactServiceImpl implements ScholarshipContactService 
     }
 
     @Override
-    public ScholarshipContactModel findById(Integer id) {
-        return scholarshipContactRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Scholarship contact not found: " + id));
+    public ScholarshipContactResponse findById(Integer id) {
+        return scholarshipContactMapper.toScholarshipContactResponse(scholarshipContactRepository.findById(id)
+               .orElseThrow(() -> new RuntimeException("Scholarship contact not found: " + id)));
     }
 
     @Override
